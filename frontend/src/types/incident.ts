@@ -1,0 +1,3 @@
+export type Severity='LOW'|'MEDIUM'|'HIGH'|'CRITICAL';
+export interface Incident {id:string;analysis_id:string;attack_type:string;source_ip:string;severity:Severity;risk_score:number;event_count:number;first_seen:string|null;last_seen:string|null;mitre_id:string;mitre_name:string;recommendation:string;evidence?:{raw_log:string;timestamp:string|null}[]}
+export interface Summary {id:string;filename:string;log_type:string;events_processed:number;created_at:string;security_incidents:number;critical_incidents:number;unique_suspicious_ips:number;threat_distribution:Record<string,number>;severity_distribution:Record<string,number>}

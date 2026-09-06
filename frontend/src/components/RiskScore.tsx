@@ -1,0 +1,1 @@
+export default function RiskScore({score}:{score:number}){return <div className="risk" aria-label={`Risk score ${score} out of 100`}><div className="risk-row"><strong>{score}</strong><span>/100</span></div><div className="risk-track"><span style={{width:`${score}%`}}/></div></div>}
